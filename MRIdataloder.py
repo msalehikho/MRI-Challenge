@@ -131,14 +131,3 @@ class MRIDataset(Dataset):
         return np.concatenate((dicoms_file,pad),axis=0)
     
     
-        
-imgs_path = r'D:\Project\Data\IAAA\data'
-labelPath = r'D:\Project\Data\IAAA\train.csv'
-    
-MRI = MRIDataset(imgs_path,labelPath,Interpolation =False,
-                     pad = True,
-                     Filter_type='T2W_FLAIR',
-                     ) 
-
-print('number of Data: ',len(MRI))
-print(MRI[0][0].shape)
